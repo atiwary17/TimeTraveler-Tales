@@ -1,7 +1,7 @@
-(()=>{
+(() => {
     "use strict";
     var e = {
-        583: (e,t)=>{
+        583: (e, t) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
@@ -16,9 +16,8 @@
                             this.el.removeChild(this.el.firstChild)
                 }
             }
-        }
-        ,
-        983: (e,t,o)=>{
+        },
+        983: (e, t, o) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
@@ -35,9 +34,8 @@
                 }
             }
             t.ItemRemoval = n
-        }
-        ,
-        658: (e,t,o)=>{
+        },
+        658: (e, t, o) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
@@ -68,9 +66,8 @@
                 }
             }
             t.MenuItem = l
-        }
-        ,
-        191: (e,t)=>{
+        },
+        191: (e, t) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
@@ -84,7 +81,7 @@
                     this.items.length < this.maximumSize && this.items.push(e)
                 }
                 removeById(e) {
-                    const t = this.items.find((t=>t.id === e));
+                    const t = this.items.find((t => t.id === e));
                     t && this.remove(t)
                 }
                 remove(e) {
@@ -94,9 +91,8 @@
                     this.items = []
                 }
             }
-        }
-        ,
-        418: (e,t)=>{
+        },
+        418: (e, t) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
@@ -108,9 +104,8 @@
                     this.color = o
                 }
             }
-        }
-        ,
-        497: (e,t)=>{
+        },
+        497: (e, t) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
@@ -132,18 +127,16 @@
             }
             t.IdPool = o,
             o.avaliableIds = []
-        }
-        ,
-        617: (e,t)=>{
+        },
+        617: (e, t) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
             t.LightDarkMode = void 0,
             t.LightDarkMode = class {
             }
-        }
-        ,
-        974: (e,t)=>{
+        },
+        974: (e, t) => {
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }),
@@ -162,7 +155,7 @@
         return e[a](l, l.exports, o),
         l.exports
     }
-    (()=>{
+    (() => {
         const e = o(658)
           , t = o(418)
           , a = o(191)
@@ -179,8 +172,7 @@
           , g = document.querySelector("body")
           , v = u.querySelector("img")
           , b = document.getElementsByClassName("winner")[0]
-          , f = document.querySelector("footer")
-          , p = document.getElementsByClassName("icons-authors")[0]
+          , p = document.querySelector("footer") // Footer removed here
           , y = new Audio("/static/roulette-wheel.mp3")
           , I = h.getContext("2d")
           , M = h.width / 2
@@ -246,7 +238,7 @@
         y.volume = .2,
         l.LightDarkMode.currentMode = "dark",
         n.IdPool.initializeIdsPool(16),
-        s.addEventListener("click", (()=>{
+        s.addEventListener("click", (() => {
             if (!_) {
                 A();
                 const o = r.value;
@@ -255,9 +247,9 @@
                     if (a) {
                         r.value = "";
                         const l = i.avaliableRGBs[a % i.avaliableRGBs.length]
-                          , s = new t.Item(a,o,l)
-                          , c = new e.MenuItem(a,o,l);
-                        c.deleteItem.el.addEventListener("click", (()=>{
+                          , s = new t.Item(a, o, l)
+                          , c = new e.MenuItem(a, o, l);
+                        c.deleteItem.el.addEventListener("click", (() => {
                             _ || (A(),
                             c.el.remove(),
                             E.splice(E.indexOf(c), 1),
@@ -265,10 +257,9 @@
                             n.IdPool.addId(s.id),
                             L(),
                             w(0))
-                        }
-                        )),
+                        }));
                         function(e, t) {
-                            t.el.addEventListener("click", (()=>{
+                            t.el.addEventListener("click", (() => {
                                 if (!_) {
                                     const o = i.avaliableRGBs.indexOf(t.el.style.backgroundColor);
                                     if (-1 !== o) {
@@ -278,8 +269,7 @@
                                         w(0)
                                     }
                                 }
-                            }
-                            ))
+                            }));
                         }(s, c),
                         x.add(s),
                         E.push(c),
@@ -292,23 +282,20 @@
                     }
                 }
             }
-        }
-        )),
-        g.addEventListener("keyup", (e=>{
+        }));
+        g.addEventListener("keyup", (e => {
             "Enter" === e.key && s.click()
-        }
-        )),
-        m.addEventListener("click", (()=>{
+        }));
+        m.addEventListener("click", (() => {
             _ || (A(),
-            E.length > 0 && (E.forEach((e=>e.el.remove())),
+            E.length > 0 && (E.forEach((e => e.el.remove())),
             E.length = 0,
             x.clear(),
             n.IdPool.initializeIdsPool(16),
             L(),
             w(0)))
-        }
-        )),
-        u.addEventListener("click", (()=>{
+        }));
+        u.addEventListener("click", (() => {
             v.animate([{
                 transform: "rotate(360deg)"
             }], {
@@ -321,8 +308,7 @@
             g.style.backgroundColor = "#121212",
             g.style.color = "white",
             l.LightDarkMode.currentMode = "dark")
-        }
-        )),
+        }));
         w(0),
         h.addEventListener("click", (function() {
             E.length > 1 && !_ && (A() ? w(0) : (y.play(),
@@ -335,24 +321,18 @@
             T = 7200 + (E.length - 1 - N) * S + Math.random() * S,
             R = T / 50 * P,
             j()))
-        }
-        )),
-        f.addEventListener("click", (()=>{
-            p.hidden = !p.hidden
-        }
-        ));
+        }));
         let _, O, R, N = Math.floor(Math.random() * E.length), S = 360 / E.length, T = 7200 + S * N;
         function j() {
             const e = (0,
             o = T,
             (t = B) == (a = R) ? 0 + o : o * (1 - Math.pow(2, -10 * t / a)) + 0);
             var t, o, a;
-            B < R || T - e > .1 ? setTimeout((()=>{
+            B < R || T - e > .1 ? setTimeout((() => {
                 w(e),
                 B += P,
                 _ = window.requestAnimationFrame(j)
-            }
-            ), P) : (window.cancelAnimationFrame(_),
+            }), P) : (window.cancelAnimationFrame(_),
             _ = null,
             b.textContent = `Winner: ${O}`,
             s.style.background = "#6082B6",
@@ -367,7 +347,5 @@
             b.textContent = "",
             !0)
         }
-    }
-    )()
-}
-)();
+    })();
+})();
