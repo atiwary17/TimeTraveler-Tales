@@ -165,6 +165,41 @@
         // Open the video in a new tab
         window.open(videoURL1, '_blank');
     }
+
+function openVideoFromFolder(videoName, winnerCallback) {
+    // Ask for user confirmation
+    const userConfirmation = confirm(`Do you want to open the video "${videoName}"?`);
+
+    if (userConfirmation) {
+        // Define the URL to the video in your GitHub repository
+        const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
+        const videoURL = `${baseURL}${videoName}`;
+
+        // Open the video in a new tab
+        const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
+        window.open(videoURL1, '_blank');
+
+        // Listen for the video's 'ended' event
+        video.addEventListener('ended', () => {
+            const userConfirmation = confirm('Are you ready for the final challenge?');
+
+            if (userConfirmation) {
+                // The user clicked "OK," invoke the winnerCallback
+                if (winnerCallback && typeof winnerCallback === 'function') {
+                    winnerCallback();
+                }
+            } else {
+                // The user clicked "Cancel," handle this case as needed
+                alert('Okay, take your time!');
+            }
+        });
+    }
+}
+
+
+
+
+        
 }
 
     function o(a) {
