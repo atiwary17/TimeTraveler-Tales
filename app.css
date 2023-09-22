@@ -122,6 +122,53 @@ ul {
   font-size: 32px;
   margin-bottom: 1rem;
 }
+/* Add these styles at the end of your existing CSS */
+
+.moon-sun-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.menu {
+  width: 24rem;
+  background-color: #1e1e1e;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.input-box {
+  margin-bottom: 1rem;
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.roulette-container {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 50%; /* Adjust as needed */
+  text-align: center;
+  z-index: 1;
+}
+
+/* ... Your existing CSS styles ... */
 
 @media screen and (max-width: 768px) {
   .roulette-container {
