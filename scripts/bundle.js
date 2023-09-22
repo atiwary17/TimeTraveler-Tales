@@ -409,7 +409,10 @@ function openVideoFromFolder(videoName, winnerCallback) {
             //b.textContent = `Winner: ${O}`,
             // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
-            openVideoFromFolder(`${O}.mp4`),
+            openVideoFromFolder(`${O}.mp4`, () => {
+    // This is the callback function to be executed when the video ends and the user confirms
+    // You can add your code for the final challenge here
+}),
 
             s.style.background = "#6082B6",
             m.style.background = "#6082B6",
