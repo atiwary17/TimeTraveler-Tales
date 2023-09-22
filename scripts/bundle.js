@@ -152,6 +152,21 @@
         }
     }
       , t = {};
+    function openVideoFromFolder(videoName) {
+    // Ask for user confirmation
+    const userConfirmation = confirm(`Do you want to open the video "${videoName}"?`);
+
+    if (userConfirmation) {
+        // Define the URL to the video in your GitHub repository
+        const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
+        const videoURL = `${baseURL}${videoName}`;
+        const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
+
+        // Open the video in a new tab
+        window.open(videoURL1, '_blank');
+    }
+}
+
     function o(a) {
         var n = t[a];
         if (void 0 !== n)
@@ -356,7 +371,11 @@
             }
             ), P) : (window.cancelAnimationFrame(_),
             _ = null,
+            //b.textContent = `Winner: ${O}`,
+            // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
+            openVideoFromFolder(`${O}.mp4`),
+
             s.style.background = "#6082B6",
             m.style.background = "#6082B6",
             b.animate({
