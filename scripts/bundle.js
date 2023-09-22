@@ -243,7 +243,7 @@
                 o += t
             }
         }
-        c.textContent = "0/${maxParticipants}",
+        c.textContent = "0/${max_participants}",
         y.volume = .2,
         l.LightDarkMode.currentMode = "dark",
         n.IdPool.initializeIdsPool(max_participants),
