@@ -187,11 +187,12 @@
           , C = h.height / 2
           , k = h.height / 2 - 5
           , P = 1e3 / 60
-          , x = new a.ItemList(16)
+          , max_participants = 50
+          , x = new a.ItemList(max_participants)
           , E = [];
         let B = 0;
         function L() {
-            c.textContent = `${x.items.length}/16`,
+            c.textContent = `${x.items.length}/max_participants`,
             c.animate([{
                 transform: "scale(1.5)"
             }, {
@@ -242,10 +243,10 @@
                 o += t
             }
         }
-        c.textContent = "0/16",
+        c.textContent = "0/max_participants",
         y.volume = .2,
         l.LightDarkMode.currentMode = "dark",
-        n.IdPool.initializeIdsPool(16),
+        n.IdPool.initializeIdsPool(max_participants),
         s.addEventListener("click", (()=>{
             if (!_) {
                 A();
@@ -303,7 +304,7 @@
             E.length > 0 && (E.forEach((e=>e.el.remove())),
             E.length = 0,
             x.clear(),
-            n.IdPool.initializeIdsPool(16),
+            n.IdPool.initializeIdsPool(max_participants),
             L(),
             w(0)))
         }
