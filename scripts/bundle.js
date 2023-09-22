@@ -181,7 +181,7 @@
           , b = document.getElementsByClassName("winner")[0]
           , f = document.querySelector("footer")
           , p = document.getElementsByClassName("icons-authors")[0]
-          , y = new Audio("https://atiwary17.github.io/static/roulette-wheel.mp3");
+          , y = new Audio("https://atiwary17.github.io/time-machine2/static/roulette-wheel.mp3");
 
           , I = h.getContext("2d")
           , M = h.width / 2
