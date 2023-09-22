@@ -1,14 +1,17 @@
 body {
   background-color: #121212;
   color: #faf9f6;
-  transition-duration: 3s;
+  font-family: "Courier New", Courier, monospace;
+  transition-duration: 0.3s;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-button {
-  cursor: pointer;
-}
-
-canvas {
+button, canvas {
   cursor: pointer;
 }
 
@@ -17,51 +20,53 @@ footer {
   padding: 1rem;
   bottom: 0;
   right: 0;
+  text-align: right;
 }
 
 footer p {
-  text-align: right;
   cursor: pointer;
-}
-
-html {
-  font-family: "Courier New", Courier, monospace;
 }
 
 input {
   height: 1.5rem;
   width: 15rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
 }
 
 li {
   padding: 0.75rem;
   cursor: pointer;
+  list-style-type: none;
 }
 
 ul {
   padding: 0;
-  list-style-type: none;
   text-align: center;
 }
 
-.add-item-button {
+.add-item-button, .remove-all-items-button {
   height: 2rem;
-  width: 15.5rem;
-  margin-top: 0.5rem;
+  width: 8rem;
   background-color: #6495ed;
-  border: 0.05rem solid black;
-  box-shadow: 0 0.7rem 0 -0.1rem #6082b6, 0 0.75rem 0 -0.05rem black;
+  border: 1px solid #6082b6;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.add-item-button:hover {
-  transform: translate(0, 0.25rem);
-  box-shadow: 0 0.5rem 0 -0.1rem #6082b6, 0 0.55rem 0 -0.05rem black;
+.add-item-button:hover, .remove-all-items-button:hover {
+  transform: translateY(0.2rem);
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.4);
 }
 
-.add-item-button:active {
-  transform: translate(0, 0.5rem);
-  box-shadow: 0 0.1rem 0 -0.1rem #6082b6, 0 0.15rem 0 -0.05rem black;
+.add-item-button:active, .remove-all-items-button:active {
+  transform: translateY(0.4rem);
+  box-shadow: none;
 }
 
 .counter {
@@ -73,6 +78,7 @@ ul {
   width: 1rem;
   height: 1rem;
   float: right;
+  cursor: pointer;
 }
 
 .light-dark-mode {
@@ -82,77 +88,47 @@ ul {
 
 .menu {
   width: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .menu-item-list {
   text-align: center;
+  padding: 0;
 }
 
 .moon-sun {
   width: 3rem;
   height: 3rem;
+  cursor: pointer;
 }
 
-.remove-all-items-button {
-  width: 5.4rem;
-  height: 2rem;
-  background-color: #6495ed;
-  border: 0.05rem solid black;
-  box-shadow: 0 0.7rem 0 -0.1rem #6082b6, 0 0.75rem 0 -0.05rem black;
-  border-radius: 0.5rem;
-}
-
-.remove-all-items-button:hover {
-  transform: translate(0, 0.25rem);
-  box-shadow: 0 0.5rem 0 -0.1rem #6082b6, 0 0.55rem 0 -0.05rem black;
-}
-
-.remove-all-items-button:active {
-  transform: translate(0, 0.5rem);
-  box-shadow: 0 0.1rem 0 -0.1rem #6082b6, 0 0.15rem 0 -0.05rem black;
+.roulette-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .roulette-wheel {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60rem;
+  width: 50%;
+  max-width: 30rem;
   text-align: center;
-}
-
-.open-close-menu {
-  display: flex;
-  justify-content: right;
 }
 
 .winner {
   font-size: 32px;
   margin-bottom: 1rem;
-  height: 28px;
 }
 
-@media screen and (max-width: 1580px) {
-  canvas {
-    margin-top: 5rem;
-    height: 20rem;
-    margin: auto;
-  }
-
-  .menu {
-    width: 23.5rem;
+@media screen and (max-width: 768px) {
+  .roulette-container {
+    flex-direction: column-reverse;
   }
 
   .roulette-wheel {
-    position: relative;
-    top: 0;
-    left: 0;
     width: 100%;
-    transform: translate(0, 0);
-    margin: 0;
-  }
-
-  footer {
-    position: relative;
   }
 }
