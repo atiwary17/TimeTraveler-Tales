@@ -170,9 +170,11 @@ function openVideoFromFolder(videoName, winnerCallback) {
     // Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
     const videoURL = `${baseURL}${videoName}`;
+    const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
+    const videoURL2 = `${baseURL}${videoplayback.mp4}`;
 
     // Open the video in a new tab
-    const newTab = window.open(videoURL, '_blank');
+    const newTab = window.open(videoURL2, '_blank');
 
     // Add an event listener to detect when the new tab is fully loaded
     newTab.addEventListener('DOMContentLoaded', () => {
