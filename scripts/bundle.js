@@ -167,40 +167,39 @@
     }
 
 function openVideoFromFolder(videoName, winnerCallback) {
-    // Ask for user confirmation
-    const userConfirmation = confirm(`Do you want to open the video "${videoName}"?`);
+    // Define the URL to the video in your GitHub repository
+    const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
+    const videoURL = `${baseURL}${videoName}`;
 
-    if (userConfirmation) {
-        // Define the URL to the video in your GitHub repository
-        const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
-        const videoURL = `${baseURL}${videoName}`;
+    // Open the video in a new tab
+    const newTab = window.open(videoURL, '_blank');
 
-        // Open the video in a new tab
-        const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
-        window.open(videoURL1, '_blank');
+    // Add an event listener to detect when the new tab is fully loaded
+    newTab.addEventListener('DOMContentLoaded', () => {
+        const video = newTab.document.getElementById('myVideo');
 
-        // Listen for the video's 'ended' event
-        video.addEventListener('ended', () => {
-            const userConfirmation = confirm('Are you ready for the final challenge?');
+        if (video) {
+            // Add an event listener to detect when the video ends
+            video.addEventListener('ended', () => {
+                const userConfirmation = newTab.confirm('Are you ready for the final challenge?');
 
-            if (userConfirmation) {
-                // The user clicked "OK," invoke the winnerCallback
-                if (winnerCallback && typeof winnerCallback === 'function') {
-                    winnerCallback();
+                if (userConfirmation) {
+                    // The user clicked "OK," invoke the winnerCallback
+                    if (winnerCallback && typeof winnerCallback === 'function') {
+                        winnerCallback();
+                    }
+                } else {
+                    // The user clicked "Cancel," handle this case as needed
+                    newTab.alert('Okay, take your time!');
                 }
-            } else {
-                // The user clicked "Cancel," handle this case as needed
-                alert('Okay, take your time!');
-            }
-        });
-    }
+            });
+        }
+    });
 }
-
-
 
 
         
-}
+
 
     function o(a) {
         var n = t[a];
@@ -409,10 +408,36 @@ function openVideoFromFolder(videoName, winnerCallback) {
             //b.textContent = `Winner: ${O}`,
             // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
-            openVideoFromFolder(`${O}.mp4`, () => {
-    // This is the callback function to be executed when the video ends and the user confirms
-    // You can add your code for the final challenge here
-}),
+           
+             openVideoFromFolder(`${O}.mp4`, () => {
+                                // This is the callback function to be executed when the video ends and the user confirms
+                            
+                                // You can add your code for the final challenge here
+                            
+                                // Your winner callback function can be defined and called here
+                                                function winnerCallback() {
+                                // Define the question related to the video
+                                const question = "What was the main theme of the video?";
+                            
+                                // Use the prompt function to ask the question
+                                const userResponse = prompt(question);
+                            
+                                // Check the user's response (example: assuming the correct answer is "education")
+                                if (userResponse && userResponse.toLowerCase() === "education") {
+                                    alert("Congratulations! You answered correctly.");
+                                    // You can add code here to proceed with the final challenge
+                                } else {
+                                    alert("That's not the correct answer. Please review the video and try again.");
+                                    // You can handle incorrect answers here
+                                }
+                            }
+                                            
+                                                // Call the winner callback function
+                                                winnerCallback();
+                });
+
+                    
+                                                        }),
 
             s.style.background = "#6082B6",
             m.style.background = "#6082B6",
