@@ -436,7 +436,7 @@ function openVideoFromFolder(videoName, winnerCallback) {
                                             
                                                 // Call the winner callback function
                                                 winnerCallback();
-                });
+             
 
                     
                                                         }),
