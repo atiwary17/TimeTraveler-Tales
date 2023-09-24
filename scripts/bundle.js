@@ -165,8 +165,8 @@
         // Open the video in a new tab
         window.open(videoURL1, '_blank');
     }
-
-function openVideoFromFolder(videoName, winnerCallback) {
+    }
+function openVideoFromFolder1(videoName, winnerCallback) {
     // Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
     const videoURL = `${baseURL}${videoName}`;
@@ -198,10 +198,6 @@ function openVideoFromFolder(videoName, winnerCallback) {
         }
     });
 }
-
-
-        
-
 
     function o(a) {
         var n = t[a];
@@ -411,7 +407,7 @@ function openVideoFromFolder(videoName, winnerCallback) {
             // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
            
-             openVideoFromFolder(`${O}.mp4`, () => {
+             openVideoFromFolder1(`${O}.mp4`, () => {
                                 // This is the callback function to be executed when the video ends and the user confirms
                             
                                 // You can add your code for the final challenge here
