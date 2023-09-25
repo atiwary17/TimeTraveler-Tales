@@ -441,14 +441,14 @@ function openVideoFromFolder3(videoName, winnerCallback) {
                 }
                 
                 function displayChoices(choices) {
-                    choicesList.innerHTML = '';
-                    choices.forEach((choice, index) => {
-                        const choiceLabel = document.createElement('label');
-                        choiceLabel.innerHTML = `
-                            <input type="radio" name="choice" value="${choice}">${choice}`;
-                        choicesList.appendChild(choiceLabel);
-                    });
-                }
+    choicesList.innerHTML = '';
+    choices.forEach((choice, index) => {
+        const choiceLabel = document.createElement('label');
+        choiceLabel.innerHTML = '<input type="radio" name="choice" value="' + choice + '">' + choice;
+        choicesList.appendChild(choiceLabel);
+    });
+}
+
             </script>
         </body>
         </html>
