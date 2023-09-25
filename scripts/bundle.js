@@ -185,7 +185,7 @@ function openVideoFromFolder1(videoName, winnerCallback) {
             </head>
             <body>
                 <video id="myVideo" controls autoplay>
-                    <source src="${videoURL}" type="video/mp4">
+                    <source src="${videoURL1}" type="video/mp4">
                 </video>
             </body>
         </html>
@@ -220,6 +220,93 @@ function openVideoFromFolder1(videoName, winnerCallback) {
     monitorVideoCompletion();
 }
 
+function openVideoFromFolder2(videoName, winnerCallback) {
+    /// Define the URL to the video in your GitHub repository
+    const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
+    const videoURL = `${baseURL}${videoName}`;
+    const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
+    const videoURL2 = `${baseURL}videoplayback.mp4`;
+
+    // Open the video in a new tab
+    const newTab = window.open('', '_blank');
+
+    // Create an environment for the video in the new tab
+    newTab.document.write(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Elegant Video Page</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f5f5f5;
+                    text-align: center;
+                }
+                
+                video {
+                    width: 80%;
+                    max-width: 800px;
+                    display: block;
+                    margin: 2em auto;
+                    border: 4px solid #333;
+                    border-radius: 10px;
+                }
+                
+                h1 {
+                    font-size: 24px;
+                    color: #333;
+                    margin: 1em 0;
+                }
+                
+                button {
+                    background-color: #333;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                
+                button:hover {
+                    background-color: #555;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Enjoy the Video</h1>
+            <video id="myVideo" controls autoplay>
+                <source src="${videoURL2}" type="video/mp4">
+            </video>
+            <button onclick="handleWinner()">I'm Ready for the Challenge</button>
+        
+            <script>
+                function handleWinner() {
+                    const userConfirmation = confirm('Are you ready for the final challenge?');
+        
+                    if (userConfirmation) {
+                        // Handle the winner action here
+                        alert('Congratulations! You are the winner!');
+                    } else {
+                        // Handle the user's choice here
+                        alert('Okay, take your time!');
+                    }
+                }
+            </script>
+        </body>
+        </html>
+    `);
+
+    // Play the video automatically (by setting the autoplay attribute)
+    const videoElement = newTab.document.getElementById('myVideo');
+    if (videoElement) {
+        videoElement.play();
+    }
+}
 
 
     function o(a) {
@@ -430,7 +517,7 @@ function openVideoFromFolder1(videoName, winnerCallback) {
             // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
            
-             openVideoFromFolder1(`${O}.mp4`, () => {
+             openVideoFromFolder2(`${O}.mp4`, () => {
                                 // This is the callback function to be executed when the video ends and the user confirms
                             
                                 // You can add your code for the final challenge here
