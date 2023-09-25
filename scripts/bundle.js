@@ -315,14 +315,6 @@ function openVideoFromFolder3(videoName, winnerCallback) {
     const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
     const videoURL2 = `${baseURL}videoplayback.mp4`;
 
-    // Define the question related to the video
-    const videoQuestions = {
-        'video1.mp4': 'What is the main subject of this video?',
-        'video2.mp4': 'How many characters are there in the video?',
-        'videoplayback.mp4': 'Name of the actress in the video',
-        // Add more questions for each video as needed
-    };
-
     // Open the video in a new tab
     const newTab = window.open('', '_blank');
 
@@ -344,7 +336,7 @@ function openVideoFromFolder3(videoName, winnerCallback) {
                 }
                 
                 video {
-                    width: 80%;
+                    width: 95%;
                     max-width: 800px;
                     display: block;
                     margin: 2em auto;
@@ -384,9 +376,7 @@ function openVideoFromFolder3(videoName, winnerCallback) {
                 <ul id="choices"></ul>
                 <button id="checkAnswer">Check Answer</button>
             </div>
-        
             <script>
-                const questions = ${JSON.stringify(videoQuestions)};
                 const videoElement = document.getElementById('myVideo');
                 const questionDiv = document.getElementById('questionDiv');
                 const questionText = document.getElementById('question');
@@ -422,7 +412,6 @@ function openVideoFromFolder3(videoName, winnerCallback) {
                         'video1.mp4': ['Choice A', 'Choice B', 'Choice C'],
                         'video2.mp4': ['Choice X', 'Choice Y', 'Choice Z'],
                         'videoplayback.mp4': ['Shahrukh Khan', 'Nayantara', 'Kajol'],
-                        
                         // Add choices for each video as needed
                     };
                     return choicesMap[video];
@@ -458,6 +447,7 @@ function openVideoFromFolder3(videoName, winnerCallback) {
         videoElement.play();
     }
 }
+
 
     function o(a) {
         var n = t[a];
