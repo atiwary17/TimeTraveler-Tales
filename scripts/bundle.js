@@ -448,6 +448,168 @@ function openVideoFromFolder3(videoName, winnerCallback) {
     }
 }
 
+function openVideoFromFolder4(videoName, winnerCallback) {
+    // Define the URL to the video in your GitHub repository
+    const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
+    const videoURL = `${baseURL}${videoName}`;
+    const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
+    const videoURL2 = `${baseURL}videoplayback.mp4`;
+
+    // Define the question related to the video
+    const videoQuestions = {
+        'video1.mp4': 'What is the main subject of this video?',
+        'video2.mp4': 'How many characters are there in the video?',
+        'videoplayback.mp4': 'Name of the actress in the video',
+        // Add more questions for each video as needed
+    };
+ 
+    // Open the video in a new tab
+    const newTab = window.open('', '_blank');
+if (newTab) {
+    // Create an environment for the video in the new tab
+    newTab.document.write(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Elegant Video Page</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f5f5f5;
+                    text-align: center;
+                }
+                
+                video {
+                    width: 80%;
+                    max-width: 800px;
+                    display: block;
+                    margin: 2em auto;
+                    border: 4px solid #333;
+                    border-radius: 10px;
+                }
+                
+                h1 {
+                    font-size: 24px;
+                    color: #333;
+                    margin: 1em 0;
+                }
+                
+                button {
+                    background-color: #333;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                
+                button:hover {
+                    background-color: #555;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Enjoy the Video</h1>
+            <video id="myVideo" controls autoplay>
+                <source src="${videoURL2}" type="video/mp4">
+            </video>
+            <button onclick="askQuestion()">I'm Ready for the Challenge</button>
+            <div id="questionDiv" style="display: none;">
+                <h2>Answer the Question:</h2>
+                <p id="question"></p>
+                <ul id="choices"></ul>
+                <button id="checkAnswer">Check Answer</button>
+            </div>
+        
+            <script>
+                const questions = ${JSON.stringify(videoQuestions)};
+                const videoElement = document.getElementById('myVideo');
+                const questionDiv = document.getElementById('questionDiv');
+                const questionText = document.getElementById('question');
+                const choicesList = document.getElementById('choices');
+                const checkAnswerButton = document.getElementById('checkAnswer');
+                
+                let currentVideo = '${videoName}';
+                
+                videoElement.addEventListener('ended', () => {
+                    askQuestion();
+                });
+
+                function askQuestion() {
+                    questionText.textContent = questions[currentVideo];
+                    const choices = getChoicesForVideo(currentVideo);
+                    displayChoices(choices);
+                    questionDiv.style.display = 'block';
+                }
+
+                checkAnswerButton.addEventListener('click', () => {
+                    const selectedChoice = document.querySelector('input[name="choice"]:checked');
+                    if (selectedChoice) {
+                        const userAnswer = selectedChoice.value;
+                        const correctAnswer = getCorrectAnswerForVideo(currentVideo);
+                        if (userAnswer === correctAnswer) {
+                            alert('Congratulations! You are the winner!');
+                            ${winnerCallback && typeof winnerCallback === 'function' ? 'winnerCallback();' : ''}
+                        } else {
+                            alert('Sorry, that\'s not correct. Try again.');
+                        }
+                    }
+                });
+                
+                function getChoicesForVideo(video) {
+                    // Define choices for each video
+                    const choicesMap = {
+                        'video1.mp4': ['Choice A', 'Choice B', 'Choice C'],
+                        'video2.mp4': ['Choice X', 'Choice Y', 'Choice Z'],
+                        'videoplayback.mp4': ['Shahrukh Khan', 'Nayantara', 'Kajol'],
+                        // Add choices for each video as needed
+                    };
+                    return choicesMap[video];
+                }
+                
+                function getCorrectAnswerForVideo(video) {
+                    // Define correct answers for each video
+                    const answersMap = {
+                        'video1.mp4': 'Choice A',
+                        'video2.mp4': 'Choice Y',
+                        'videoplayback.mp4': 'Nayantara',
+                        // Add correct answers for each video as needed
+                    };
+                    return answersMap[video];
+                }
+                
+                function displayChoices(choices) {
+                    choicesList.innerHTML = '';
+                    choices.forEach((choice, index) => {
+                        const choiceLabel = document.createElement('label');
+                        choiceLabel.innerHTML = '<input type="radio" name="choice" value="' + choice + '">' + choice;
+                        choicesList.appendChild(choiceLabel);
+                    });
+                    
+                }
+                // Play the video automatically (by setting the autoplay attribute)
+    const videoElement = newTab.document.getElementById('myVideo');
+    if (videoElement) {
+        videoElement.play();
+    }
+    } else {
+        alert('Pop-up blocker may be preventing the video from opening. Please disable the pop-up blocker.');
+    }
+}
+    
+            </script>
+        </body>
+        </html>
+    `);
+
+    
+}
+    
 
     function o(a) {
         var n = t[a];
@@ -657,7 +819,7 @@ function openVideoFromFolder3(videoName, winnerCallback) {
             // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
            
-             openVideoFromFolder3(`${O}.mp4`, () => {
+             openVideoFromFolder4(`${O}.mp4`, () => {
                                 // This is the callback function to be executed when the video ends and the user confirms
                             
                                 // You can add your code for the final challenge here
