@@ -248,7 +248,7 @@ function openVideoFromFolder2(videoName, winnerCallback) {
                 }
                 
                 video {
-                    width: 90%;
+                    width: 95%;
                     max-width: 800px;
                     display: block;
                     margin: 2em auto;
