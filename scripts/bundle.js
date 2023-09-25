@@ -309,7 +309,7 @@ function openVideoFromFolder2(videoName, winnerCallback) {
 }
 
 function openVideoFromFolder3(videoName, winnerCallback) {
-    /// Define the URL to the video in your GitHub repository
+    // Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
     const videoURL = `${baseURL}${videoName}`;
     const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
@@ -320,7 +320,6 @@ function openVideoFromFolder3(videoName, winnerCallback) {
         'video1.mp4': 'What is the main subject of this video?',
         'video2.mp4': 'How many characters are there in the video?',
         'videoplayback.mp4': 'Name of the actress in the video',
-        
         // Add more questions for each video as needed
     };
 
@@ -441,14 +440,13 @@ function openVideoFromFolder3(videoName, winnerCallback) {
                 }
                 
                 function displayChoices(choices) {
-    choicesList.innerHTML = '';
-    choices.forEach((choice, index) => {
-        const choiceLabel = document.createElement('label');
-        choiceLabel.innerHTML = '<input type="radio" name="choice" value="' + choice + '">' + choice;
-        choicesList.appendChild(choiceLabel);
-    });
-}
-
+                    choicesList.innerHTML = '';
+                    choices.forEach((choice, index) => {
+                        const choiceLabel = document.createElement('label');
+                        choiceLabel.innerHTML = '<input type="radio" name="choice" value="' + choice + '">' + choice;
+                        choicesList.appendChild(choiceLabel);
+                    });
+                }
             </script>
         </body>
         </html>
