@@ -3,7 +3,7 @@
     var e = {
         583: (e,t)=>{
             Object.defineProperty(t, "__esModule", {
-                value: !0
+                value: !0 
             }),
             t.Component = void 0,
             t.Component = class {
@@ -177,8 +177,22 @@ function openVideoFromFolder1(videoName, winnerCallback) {
     // Open the video in a new tab
     const newTab = window.open(videoURL2, '_blank');
 
-    // Add an event listener to detect when the new tab is fully loaded
-    newTab.addEventListener('DOMContentLoaded', () => {
+    // Create an environment for the video in the new tab
+    newTab.document.write(`
+        <html>
+            <head>
+                <title>Video Page</title>
+            </head>
+            <body>
+                <video id="myVideo" controls autoplay>
+                    <source src="${videoURL}" type="video/mp4">
+                </video>
+            </body>
+        </html>
+    `);
+
+    // Function to monitor video completion
+    function monitorVideoCompletion() {
         const video = newTab.document.getElementById('myVideo');
 
         if (video) {
@@ -196,9 +210,17 @@ function openVideoFromFolder1(videoName, winnerCallback) {
                     newTab.alert('Okay, take your time!');
                 }
             });
+        } else {
+            // The video element is not available yet, check again in 500 milliseconds
+            setTimeout(monitorVideoCompletion, 500);
         }
-    });
+    }
+
+    // Monitor video completion
+    monitorVideoCompletion();
 }
+
+
 
     function o(a) {
         var n = t[a];
