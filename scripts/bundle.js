@@ -225,7 +225,7 @@ function openVideoFromFolder2(videoName, winnerCallback) {
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
     const videoURL = `${baseURL}${videoName}`;
     const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
-    const videoURL2 = `{baseURL}$KT.mp4`;
+    const videoURL2 = `https://atiwary17.github.io/time-machine2/videos/KT.mp4`;
 
     // Open the video in a new tab
     const newTab = window.open('', '_blank');
