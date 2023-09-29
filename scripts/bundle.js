@@ -251,12 +251,9 @@
             </div>
 
             <script>
-                // Get the video name from the function parameter or any other source
-                const videoName = '${videoName}'; // Get the video name from the function parameter
             
                 // Retrieve video URL based on videoName
-                const vidURL = videoURLs[videoName]; // Retrieve video URL based on videoName
-            
+                const vidURL = "${videoURLs["${videoName}"]}"; // Retrieve video URL based on videoName
                 // Set the src attribute of the iframe element
                 const iframe = document.querySelector('iframe');
                 if (iframe) {
