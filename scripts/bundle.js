@@ -238,39 +238,26 @@
             <button id="readyButton">I'm Ready for the Challenge</button>
 
             <script>
-                function handleWinner() {
-                    const userConfirmation = confirm('Are you ready for the final challenge?');
-
-                    if (userConfirmation) {
-                        const puzzleURL = videoPuzzleURLs['video1']; // Adjust this to the appropriate video name
-                        if (puzzleURL) {
-                            // Open the puzzle URL in a new tab
-                            window.open(puzzleURL, '_blank');
-                        } else {
-                            alert('Puzzle URL not found for the selected video.');
-                        }
+                function openPuzzle() {
+                    const puzzleURL = "${videoPuzzleURLs['video1']}"; // Adjust this to the appropriate video name
+                    if (puzzleURL) {
+                        // Open the puzzle URL in a new tab
+                        window.open(puzzleURL, '_blank');
                     } else {
-                        // Handle the user's choice here
-                        alert('Okay, take your time!');
+                        alert('Puzzle URL not found for the selected video.');
                     }
                 }
 
-                // Add an event listener to the button to play the video
+                // Add an event listener to the button to open the puzzle URL
                 const readyButton = document.getElementById('readyButton');
                 if (readyButton) {
-                    readyButton.addEventListener('click', function() {
-                        const iframeElement = document.querySelector('iframe');
-                        if (iframeElement) {
-                            iframeElement.src += '?autoplay=1'; // Autoplay the YouTube video
-                        }
-                    });
+                    readyButton.addEventListener('click', openPuzzle);
                 }
             </script>
         </body>
         </html>
     `);
 }
-
 
 
 function openVideoFromFolder2(videoName, winnerCallback) {
