@@ -198,7 +198,7 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Elegant Video Page</title>
+            <title>Past Events Explainer</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -240,7 +240,7 @@
             </style>
         </head>
         <body>
-            <h1>Enjoy the Video</h1>
+            <h1>Watch the video carefully and click 'I'm Ready' when prepared for the challenge.</h1>
             <!-- Embed the YouTube video using an iframe -->
             <div>
             
