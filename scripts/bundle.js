@@ -175,8 +175,8 @@
     const videoURL3 = `https://www.youtube.com/embed/ZyiFeREyLYo`;
 
     const videoPuzzleURLs = {
-        video1.mp4: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
-        video2.mp4: 'https://example.com/puzzle2',
+        'video1.mp4': 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
+        'video2.mp4': 'https://example.com/puzzle2',
         // Add more video puzzle URLs as needed
     };
 
