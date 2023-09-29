@@ -172,6 +172,8 @@ function openVideoFromFolder1(videoName, winnerCallback) {
     const videoURL = `${baseURL}${videoName}`;
     const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
     const videoURL2 = `${baseURL}videoplayback.mp4`;
+    const videoURL3 = `https://www.youtube.com/watch?v=ZyiFeREyLYo`;
+    
 
 
     // Open the video in a new tab
@@ -292,7 +294,7 @@ function openVideoFromFolder2(videoName, winnerCallback) {
         <body>
             <h1>Enjoy the Video</h1>
             <video id="myVideo" controls autoplay>
-                <source src="${videoURL2}" type="video/mp4">
+                <source src="${videoURL3}" type="video/mp4">
             </video>
             <button id="readyButton">I'm Ready for the Challenge</button>
 
