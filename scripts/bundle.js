@@ -227,6 +227,18 @@ function openVideoFromFolder2(videoName, winnerCallback) {
     const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
     const videoURL2 = `https://atiwary17.github.io/time-machine2/videos/KT.mp4`;
 
+    const videoURLs = {
+    video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
+    video2: 'https://example.com/video2',
+    // Add more video URLs as needed
+};
+
+    const videoPuzzleURLs = {
+    video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
+    video2: 'https://example.com/puzzle2',
+    // Add more video puzzle URLs as needed
+};
+
     // Open the video in a new tab
     const newTab = window.open('', '_blank');
 
@@ -285,18 +297,24 @@ function openVideoFromFolder2(videoName, winnerCallback) {
             <button onclick="handleWinner()">I'm Ready for the Challenge</button>
         
             <script>
-                function handleWinner() {
-                    const userConfirmation = confirm('Are you ready for the final challenge?');
-        
-                    if (userConfirmation) {
-                        // Handle the winner action here
-                        alert('Congratulations! You are the winner!');
-                    } else {
-                        // Handle the user's choice here
-                        alert('Okay, take your time!');
-                    }
-                }
-            </script>
+    function handleWinner(videoName) {
+        const userConfirmation = confirm('Are you ready for the final challenge?');
+
+        if (userConfirmation) {
+            const puzzleURL = videoPuzzleURLs[videoName];
+            if (puzzleURL) {
+                // Open the puzzle URL in a new tab
+                window.open(puzzleURL, '_blank');
+            } else {
+                alert('Puzzle URL not found for the selected video.');
+            }
+        } else {
+            // Handle the user's choice here
+            alert('Okay, take your time!');
+        }
+    }
+</script>
+
         </body>
         </html>
     `);
