@@ -228,6 +228,7 @@ function openVideoFromFolder2(videoName, winnerCallback) {
     const videoURL = `${baseURL}${videoName}`;
     const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
     const videoURL2 = `https://atiwary17.github.io/time-machine2/videos/KT.mp4`;
+    const videoURL3 = `https://www.youtube.com/watch?v=ZyiFeREyLYo`;
 
     const videoURLs = {
     video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
