@@ -166,61 +166,112 @@
         window.open(videoURL1, '_blank');
     }
     }
-function openVideoFromFolder1(videoName, winnerCallback) {
+    
+    
+    function openVideoFromFolder1(videoName, winnerCallback) {
     // Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
     const videoURL = `${baseURL}${videoName}`;
-    const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
-    const videoURL2 = `${baseURL}videoplayback.mp4`;
-    const videoURL3 = `https://www.youtube.com/watch?v=ZyiFeREyLYo`;
-    
+    const videoURL3 = `https://www.youtube.com/embed/ZyiFeREyLYo`;
 
+    const videoPuzzleURLs = {
+        video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
+        video2: 'https://example.com/puzzle2',
+        // Add more video puzzle URLs as needed
+    };
 
     // Open the video in a new tab
-    const newTab = window.open(videoURL2, '_blank');
+    const newTab = window.open('', '_blank');
 
     // Create an environment for the video in the new tab
     newTab.document.write(`
-        <html>
-            <head>
-                <title>Video Page</title>
-            </head>
-            <body>
-                <video id="myVideo" controls autoplay>
-                    <source src="${videoURL1}" type="video/mp4">
-                </video>
-            </body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Elegant Video Page</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f5f5f5;
+                    text-align: center;
+                }
+                
+                iframe {
+                    width: 95%;
+                    max-width: 800px;
+                    height: 450px; /* You can adjust the height as needed */
+                    display: block;
+                    margin: 2em auto;
+                    border: 4px solid #333;
+                    border-radius: 10px;
+                }
+                
+                h1 {
+                    font-size: 24px;
+                    color: #333;
+                    margin: 1em 0;
+                }
+                
+                button {
+                    background-color: #333;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                }
+                
+                button:hover {
+                    background-color: #555;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Enjoy the Video</h1>
+            <!-- Embed the YouTube video using an iframe -->
+            <iframe src="${videoURL3}" frameborder="0" allowfullscreen></iframe>
+            <button id="readyButton">I'm Ready for the Challenge</button>
+
+            <script>
+                function handleWinner() {
+                    const userConfirmation = confirm('Are you ready for the final challenge?');
+
+                    if (userConfirmation) {
+                        const puzzleURL = videoPuzzleURLs['video1']; // Adjust this to the appropriate video name
+                        if (puzzleURL) {
+                            // Open the puzzle URL in a new tab
+                            window.open(puzzleURL, '_blank');
+                        } else {
+                            alert('Puzzle URL not found for the selected video.');
+                        }
+                    } else {
+                        // Handle the user's choice here
+                        alert('Okay, take your time!');
+                    }
+                }
+
+                // Add an event listener to the button to play the video
+                const readyButton = document.getElementById('readyButton');
+                if (readyButton) {
+                    readyButton.addEventListener('click', function() {
+                        const iframeElement = document.querySelector('iframe');
+                        if (iframeElement) {
+                            iframeElement.src += '?autoplay=1'; // Autoplay the YouTube video
+                        }
+                    });
+                }
+            </script>
+        </body>
         </html>
     `);
-
-    // Function to monitor video completion
-    function monitorVideoCompletion() {
-        const video = newTab.document.getElementById('myVideo');
-
-        if (video) {
-            // Add an event listener to detect when the video ends
-            video.addEventListener('ended', () => {
-                const userConfirmation = newTab.confirm('Are you ready for the final challenge?');
-
-                if (userConfirmation) {
-                    // The user clicked "OK," invoke the winnerCallback
-                    if (winnerCallback && typeof winnerCallback === 'function') {
-                        winnerCallback();
-                    }
-                } else {
-                    // The user clicked "Cancel," handle this case as needed
-                    newTab.alert('Okay, take your time!');
-                }
-            });
-        } else {
-            // The video element is not available yet, check again in 500 milliseconds
-            setTimeout(monitorVideoCompletion, 500);
-        }
-    }
-
-    // Monitor video completion
-    monitorVideoCompletion();
 }
+
+
 
 function openVideoFromFolder2(videoName, winnerCallback) {
     /// Define the URL to the video in your GitHub repository
@@ -691,7 +742,7 @@ function openVideoFromFolder3(videoName, winnerCallback) {
             // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
            
-             openVideoFromFolder2(`${O}.mp4`, () => {
+             openVideoFromFolder1(`${O}.mp4`, () => {
                                 // This is the callback function to be executed when the video ends and the user confirms
                             
                                 // You can add your code for the final challenge here
