@@ -219,10 +219,12 @@
                 }
                 
                 h1 {
-                    font-size: 24px;
-                    color: #333;
-                    margin: 1em 0;
-                }
+                        font-family: 'Elephant', sans-serif;
+                        font-size: 36px;
+                        color: #333;
+                        letter-spacing: 2px;
+                        margin: 1em 0;
+                    }
                 
                 button {
                     background-color: #333;
@@ -240,7 +242,7 @@
             </style>
         </head>
         <body>
-            <h1>Watch the video carefully and click 'I'm Ready' when prepared for the challenge.</h1>
+            <h1>Watch the video carefully and click 'I'm Ready for the Challenge', when prepared for the challenge...</h1>
             <!-- Embed the YouTube video using an iframe -->
             <div>
             
