@@ -3,7 +3,13 @@ body {
   color: #faf9f6;
   transition-duration: 3s;
 }
-
+h1 {
+    font-family: 'Elephant', sans-serif;
+    font-size: 36px;
+    color: #333;
+    letter-spacing: 2px;
+    margin: 1em 0;
+}
 button {
   cursor: pointer;
 }
