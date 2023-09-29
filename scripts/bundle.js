@@ -249,8 +249,7 @@
                     } else {
                         alert('Puzzle URL not found for the selected video.');
                     }
-                    / Close the current tab
-                    window.close();
+                    
                 }
 
                 // Add an event listener to the button to open the puzzle URL and close the tab
