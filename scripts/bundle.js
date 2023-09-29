@@ -235,7 +235,8 @@
             <h1>Enjoy the Video</h1>
             <!-- Embed the YouTube video using an iframe -->
             <div>
-            <iframe src="${videoURL3}" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZyiFeREyLYo?si=tlhgle_a3b87LLcx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
             </div>
             <button id="readyButton">I'm Ready for the Challenge</button>
 
