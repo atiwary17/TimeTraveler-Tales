@@ -172,7 +172,7 @@
     // Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
     const videoURL = `${baseURL}${videoName}`;
-    const videoURL3 = `https://youtu.be/ZyiFeREyLYo?si=tlhgle_a3b87LLcx`;
+    const videoURL3 = "https://www.youtube.com/embed/qpIdoaaPa6U?si=Me8Ufd-P8P9GZ1D8";
 
     const videoPuzzleURLs = {
         video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
@@ -235,7 +235,7 @@
             <h1>Enjoy the Video</h1>
             <!-- Embed the YouTube video using an iframe -->
             <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZyiFeREyLYo?si=tlhgle_a3b87LLcx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="${videoURL3}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             </div>
             <button id="readyButton">I'm Ready for the Challenge</button>
