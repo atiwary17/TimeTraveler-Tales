@@ -234,7 +234,9 @@
         <body>
             <h1>Enjoy the Video</h1>
             <!-- Embed the YouTube video using an iframe -->
+            <div>
             <iframe src="${videoURL3}" frameborder="0" allowfullscreen></iframe>
+            </div>
             <button id="readyButton">I'm Ready for the Challenge</button>
 
             <script>
