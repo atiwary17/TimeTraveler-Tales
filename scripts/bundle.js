@@ -254,14 +254,10 @@
                 }
 
                 // Add an event listener to the button to open the puzzle URL and close the tab
+                // Add an event listener to the button to open the puzzle URL
+                const readyButton = document.getElementById('readyButton');
                 if (readyButton) {
-                    readyButton.addEventListener('click', function () {
-                        // Pause the video (if it's an iframe)
-                        if (videoElement) {
-                            videoElement.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
-                        }
-                        openPuzzle();
-                    });
+                    readyButton.addEventListener('click', openPuzzle);
                 }
             </script>
         </body>
