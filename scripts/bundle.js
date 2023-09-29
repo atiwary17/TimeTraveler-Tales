@@ -174,11 +174,11 @@
     const videoURL = `${baseURL}${videoName}`;
     const videoURL3 = `https://www.youtube.com/embed/ZyiFeREyLYo`;
 
-    const videoURLs = {
-    video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
-    video2: 'https://example.com/video2',
-    // Add more video URLs as needed
-};
+    const videoPuzzleURLs = {
+        video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
+        video2: 'https://example.com/puzzle2',
+        // Add more video puzzle URLs as needed
+    };
 
     // Open the video in a new tab
     const newTab = window.open('', '_blank');
