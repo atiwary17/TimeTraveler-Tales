@@ -172,7 +172,7 @@
     // Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
     const videoURL = `${baseURL}${videoName}`;
-    const videoURL3 = `https://www.youtube.com/watch?v=RLzC55ai0eo`;
+    const videoURL3 = `https://www.youtube.com/watch?v=j85AHSzx_po`;
 
     const videoPuzzleURLs = {
         video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
