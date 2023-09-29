@@ -171,12 +171,20 @@
     function openVideoFromFolder1(videoName, winnerCallback) {
     // Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
-    const videoURL = `${baseURL}${videoName}`;
+    const videoURL0 = `${baseURL}${videoName}`;
     const videoURL3 = "https://www.youtube.com/embed/qpIdoaaPa6U?si=Me8Ufd-P8P9GZ1D8";
+
+    const videoURLs = {
+        video1: "https://www.youtube.com/embed/qpIdoaaPa6U?si=Me8Ufd-P8P9GZ1D8",
+        video2: "https://www.youtube.com/embed/FGTv9-oQhIg?si=_oErIxiDxCKQ9MGw" ,
+        video3: "https://www.youtube.com/embed/BNfAf4To73c?si=PHd919KADgikXyiL"  ,
+        // Add more video URLs as needed
+    };
 
     const videoPuzzleURLs = {
         video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
-        video2: 'https://example.com/puzzle2',
+        video2: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
+        video3: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
         // Add more video puzzle URLs as needed
     };
 
@@ -235,9 +243,28 @@
             <h1>Enjoy the Video</h1>
             <!-- Embed the YouTube video using an iframe -->
             <div>
-            <iframe width="560" height="315" src="${videoURL3}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            
+                   
+            <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
             </div>
+
+            <script>
+                // Get the video name from the function parameter or any other source
+                const videoName = '${videoName}'; // Get the video name from the function parameter
+            
+                // Retrieve video URL based on videoName
+                const vidURL = videoURLs[videoName]; // Retrieve video URL based on videoName
+            
+                // Set the src attribute of the iframe element
+                const iframe = document.querySelector('iframe');
+                if (iframe) {
+                    iframe.src = vidURL;
+                }
+            </script>
+
+
             <button id="readyButton">I'm Ready for the Challenge</button>
 
             <script>
@@ -268,7 +295,7 @@
 function openVideoFromFolder2(videoName, winnerCallback) {
     /// Define the URL to the video in your GitHub repository
     const baseURL = 'https://atiwary17.github.io/time-machine2/videos/';
-    const videoURL = `${baseURL}${videoName}`;
+    const videoURL0 = `${baseURL}${videoName}`;
     const videoURL1 = `https://www.youtube.com/watch?v=VAdGW7QDJiU`;
     const videoURL2 = `https://atiwary17.github.io/time-machine2/videos/KT.mp4`;
     const videoURL3 = `https://www.youtube.com/watch?v=ZyiFeREyLYo`;
