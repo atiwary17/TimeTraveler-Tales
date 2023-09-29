@@ -249,12 +249,19 @@
                     } else {
                         alert('Puzzle URL not found for the selected video.');
                     }
+                    / Close the current tab
+                    window.close();
                 }
 
-                // Add an event listener to the button to open the puzzle URL
-                const readyButton = document.getElementById('readyButton');
+                // Add an event listener to the button to open the puzzle URL and close the tab
                 if (readyButton) {
-                    readyButton.addEventListener('click', openPuzzle);
+                    readyButton.addEventListener('click', function () {
+                        // Pause the video (if it's an iframe)
+                        if (videoElement) {
+                            videoElement.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        }
+                        openPuzzle();
+                    });
                 }
             </script>
         </body>
