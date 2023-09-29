@@ -294,9 +294,10 @@ function openVideoFromFolder2(videoName, winnerCallback) {
             <video id="myVideo" controls autoplay>
                 <source src="${videoURL2}" type="video/mp4">
             </video>
-            <button onclick="handleWinner()">I'm Ready for the Challenge</button>
+            <button id="readyButton">I'm Ready for the Challenge</button>
+
         
-            <script>
+   <script>
     function handleWinner(videoName) {
         const userConfirmation = confirm('Are you ready for the final challenge?');
 
@@ -313,7 +314,19 @@ function openVideoFromFolder2(videoName, winnerCallback) {
             alert('Okay, take your time!');
         }
     }
+    
+    // Add an event listener to the button to play the video
+    const readyButton = document.getElementById('readyButton');
+    if (readyButton) {
+        readyButton.addEventListener('click', function() {
+            const videoElement = document.getElementById('myVideo');
+            if (videoElement) {
+                videoElement.play();
+            }
+        });
+    }
 </script>
+
 
         </body>
         </html>
