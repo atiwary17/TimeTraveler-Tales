@@ -253,7 +253,7 @@
             <script>
             
                 // Retrieve video URL based on videoName
-                const vidURL = "${videoURLs["${videoName}"]}"; // Retrieve video URL based on videoName
+                const vidURL = "${videoURLs[videoName]}"; // Retrieve video URL based on videoName
                 // Set the src attribute of the iframe element
                 const iframe = document.querySelector('iframe');
                 if (iframe) {
