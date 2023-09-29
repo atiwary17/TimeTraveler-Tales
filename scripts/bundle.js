@@ -757,8 +757,8 @@ function openVideoFromFolder3(videoName, winnerCallback) {
             //b.textContent = `Winner: ${O}`,
             // Inside the 'j' function or wherever you determine the winner
             b.textContent = `Winner: ${O}`,
-           
-             openVideoFromFolder1(`${O}.mp4`, () => {
+           //openVideoFromFolder1(`${O}.mp4`, () => {
+             openVideoFromFolder1(`${O}`, () => {
                                 // This is the callback function to be executed when the video ends and the user confirms
                             
                                 // You can add your code for the final challenge here
