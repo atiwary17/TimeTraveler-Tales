@@ -651,7 +651,7 @@ function openVideoFromFolder3(videoName, winnerCallback) {
                 o += t
             }
         }
-        c.textContent = "0/50",
+        c.textContent = `0/${max_participants}`,
         y.volume = .2,
         l.LightDarkMode.currentMode = "dark",
         n.IdPool.initializeIdsPool(max_participants),
