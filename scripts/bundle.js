@@ -596,7 +596,7 @@ function openVideoFromFolder3(videoName, winnerCallback) {
           , k = h.height / 2 - 5
           , P = 1e3 / 60
           , max_participants = 50
-          , x = new a.ItemList(max_participa)
+          , x = new a.ItemList(max_participants)
           , E = [];
         let B = 0;
         function L() {
