@@ -175,9 +175,6 @@
     const videoURL3 = "https://www.youtube.com/embed/qpIdoaaPa6U?si=Me8Ufd-P8P9GZ1D8";
 
     const videoURLs = {
-        video1: "https://www.youtube.com/embed/qpIdoaaPa6U?si=Me8Ufd-P8P9GZ1D8",
-        video2: "https://www.youtube.com/embed/FGTv9-oQhIg?si=_oErIxiDxCKQ9MGw" ,
-        video3: "https://www.youtube.com/embed/BNfAf4To73c?si=PHd919KADgikXyiL"  ,
         KT: "https://www.youtube.com/embed/Mqc2-mpP9vg?si=XR0b8osTX6tvB0vc"  ,
         PT: "https://www.youtube.com/embed/LgwBemdrR_E?si=wdI_a-IbyaOa18uX"  ,
         LIA: "https://www.youtube.com/embed/kcqeAVIDDNY?si=jc2wRQa4bNrLQSbQ"  ,
@@ -192,6 +189,12 @@
         video1: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
         video2: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
         video3: 'https://puzzel.org/quiz/play?p=-NfNljz4o-HKgJ6ULm8T',
+        KT: "https://puzzel.org/en/quiz/play?p=-NfavFYg5JG7nw6p_IbK"  ,
+        PT: "https://puzzel.org/en/quiz/play?p=-NfNljz4o-HKgJ6ULm8T"  ,
+        LIA: "https://puzzel.org/en/quiz/play?p=-Nfb5beamzM8F8mMnVu8"  ,
+        YD: "https://puzzel.org/en/quiz/play?p=-Nfb1gY0qnzqDfqmI5W3"  ,
+        OE: "https://puzzel.org/en/quiz/play?p=-Nfb2ZYpgR7tUfeMe0Lr"  ,
+
         // Add more video puzzle URLs as needed
     };
 
@@ -275,7 +278,7 @@
 
             <script>
                 function openPuzzle() {
-                    const puzzleURL = "${videoPuzzleURLs['video1']}"; // Adjust this to the appropriate video name
+                    const puzzleURL = "${videoPuzzleURLs[videoName]}"; // Adjust this to the appropriate video name
                     if (puzzleURL) {
                         // Open the puzzle URL in a new tab
                         window.open(puzzleURL, '_blank');
