@@ -178,6 +178,13 @@
         video1: "https://www.youtube.com/embed/qpIdoaaPa6U?si=Me8Ufd-P8P9GZ1D8",
         video2: "https://www.youtube.com/embed/FGTv9-oQhIg?si=_oErIxiDxCKQ9MGw" ,
         video3: "https://www.youtube.com/embed/BNfAf4To73c?si=PHd919KADgikXyiL"  ,
+        KT: "https://www.youtube.com/embed/Mqc2-mpP9vg?si=XR0b8osTX6tvB0vc"  ,
+        PT: "https://www.youtube.com/embed/LgwBemdrR_E?si=wdI_a-IbyaOa18uX"  ,
+        LIA: "https://www.youtube.com/embed/kcqeAVIDDNY?si=jc2wRQa4bNrLQSbQ"  ,
+        YD: "https://www.youtube.com/embed/y2C1Il71jec?si=i4-UMZK6evDiX8eW"  ,
+        OE: "https://www.youtube.com/embed/G2PP6o0m2aI?si=HcyOpbKe2z2fY4oK"  ,
+        
+        
         // Add more video URLs as needed
     };
 
