@@ -16,6 +16,8 @@ To play TimeTraveler-Tales, simply [click here](https://atiwary17.github.io/Time
    - YD (Enter "YD" for a trip to the Younger Dryas era)
   
 ![Add as Entry](https://github.com/atiwary17/TimeTraveler-Tales/raw/main/static/spinner.png)
+![Spin the Wheel](https://github.com/atiwary17/TimeTraveler-Tales/raw/main/static/wheel.png)
+
 
 3. **Watch the Video**: Immerse yourself in the chosen time period with a short video clip. Keep an eye out for clues!
 
@@ -38,8 +40,4 @@ Contributions to improve the game or add new features are welcome. If you'd like
 Have fun exploring TimeTraveler-Tales! If you encounter any issues or have suggestions, feel free to [open an issue](https://github.com/atiwary17/TimeTraveler-Tales/issues). Your feedback is valuable!
 
 
-## Demo
 
-**Live: [https://heuristic-jepsen-6c6fd2.netlify.app](https://atiwary17.github.io/TimeTraveler-Tales/)https://atiwary17.github.io/TimeTraveler-Tales/**
-
-![roulette-wheel](pictures/view.png)
