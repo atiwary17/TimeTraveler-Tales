@@ -14,6 +14,8 @@ To play TimeTraveler-Tales, simply [click here](https://atiwary17.github.io/Time
    - OE (Enter "OE" to explore the Great Oxidation Event)
    - LIA (Enter "LIA" to live through the Little Ice Age)
    - YD (Enter "YD" for a trip to the Younger Dryas era)
+  
+![Add as Entry](https://github.com/atiwary17/TimeTraveler-Tales/raw/main/static/spinner.png)
 
 3. **Watch the Video**: Immerse yourself in the chosen time period with a short video clip. Keep an eye out for clues!
 
