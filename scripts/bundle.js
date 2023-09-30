@@ -596,11 +596,11 @@ function openVideoFromFolder3(videoName, winnerCallback) {
           , k = h.height / 2 - 5
           , P = 1e3 / 60
           , max_participants = 50
-          , x = new a.ItemList(max_participants)
+          , x = new a.ItemList(max_participa)
           , E = [];
         let B = 0;
         function L() {
-            c.textContent = `${x.items.length}/max_participants`,
+            c.textContent = `${x.items.length}/${max_participants}`,
             c.animate([{
                 transform: "scale(1.5)"
             }, {
