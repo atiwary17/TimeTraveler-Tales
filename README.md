@@ -8,11 +8,16 @@ To play TimeTraveler-Tales, simply [click here](https://atiwary17.github.io/Time
 
 ## How to Play
 
-1. **Spin the Wheel**: Start your journey by spinning the time-travel wheel to determine your destination era.
+1. **Spin the Wheel**: Start your journey by spinning the time-travel wheel to determine your destination era.Use the following events as an entry to begin your adventure:
+   - KT (Enter "KT" for a journey to the KT Extinction Event)
+   - PT (Enter "PT" to experience the PT Extinction)
+   - OE (Enter "OE" to explore the Great Oxidation Event)
+   - LIA (Enter "LIA" to live through the Little Ice Age)
+   - YD (Enter "YD" for a trip to the Younger Dryas era)
 
-2. **Watch the Video**: Immerse yourself in the chosen time period with a short video clip. Keep an eye out for clues!
+3. **Watch the Video**: Immerse yourself in the chosen time period with a short video clip. Keep an eye out for clues!
 
-3. **Solve the Puzzle**: Put your wits to the test by solving era-specific puzzles. Correct answers will propel you through time, while incorrect ones might take you in unexpected directions.
+4. **Solve the Puzzle**: Put your wits to the test by solving era-specific puzzles. Correct answers will propel you through time, while incorrect ones might take you in unexpected directions.
 
 Enjoy the adventure, and may your travels through time be filled with excitement and discovery!
 
